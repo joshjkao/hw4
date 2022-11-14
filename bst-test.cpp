@@ -12,19 +12,38 @@ int main(int argc, char *argv[])
     // Binary Search Tree tests
 
   srand(0);
+  // AVLTree<int,int> it;
+  // bool running = true;
+  // for (int n = 0; n < 50 && running; n++) {
+  //   for (int i = 0; i < 8 && running; i++) {
+  //     int randi = rand() % 100;
+  //     it.insert(std::make_pair(randi,i));
+  //     cout << "inserting " << randi << std::endl;
+  //     if (!it.isBalanced()) {
+  //       cout << "balanced failed" << std::endl;
+  //       running = false;
+  //     }
+  //     it.print();
+  //   }
+  //   it.clear();
+  // }
 
-  BinarySearchTree<int, int> at;
+  AVLTree<int, double> bst;
+	bst.insert(std::make_pair(2, 1.0));
+	bst.insert(std::make_pair(3, 1.0));
+	bst.insert(std::make_pair(1, 1.0));
+	bst.insert(std::make_pair(4, 1.0));
+  bst.print();
+	bst.remove(1);
 
-  for (size_t i = 0; i < 2; i++) {
-    at.insert(std::make_pair(rand()%100, rand()%100));
-  }
-  at.print();
-  at.clear();
+  bst.print();
+
+  // BinarySearchTree<int, int> at;
 
     // AVL Tree Tests
-    // AVLTree<char,int> at;
-    // at.insert(std::make_pair('a',1));
-    // at.insert(std::make_pair('b',2));
+    
+    
+    // at.print();
 
     // cout << "\nAVLTree contents:" << endl;
     // for(AVLTree<char,int>::iterator it = at.begin(); it != at.end(); ++it) {
